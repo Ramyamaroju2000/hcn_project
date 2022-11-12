@@ -7,16 +7,16 @@ export const cholaLogin = async (
     takeScreenshot: Function
   ) => {
     console.log(`Filling star insurance login details`);
-    await page.goto('https://cashless.cholainsurance.com/login');
+    await page.goto('https://insurance.com/login');
     //await page.screenshot({'path': 'login.png'})
     await page.waitForSelector("input[formcontrolname='UserName']");
     //console.log(User Name, Password);
     await page.waitForTimeout(5000);
     console.log("------------------------------------------------------------------------------------------")
-  await (await page.$('input[formcontrolname="UserName"]')).type("101000000038555");
+  await (await page.$('input[formcontrolname="UserName"]')).type("38555");
   page.waitForNavigation(),
   await page.waitForTimeout(2000);
-  await (await page.$('input[formcontrolname="PassWord"]')).type("CHOLA@123");
+  await (await page.$('input[formcontrolname="PassWord"]')).type("@12345");
   page.waitForNavigation(),
 
   await page.waitForTimeout(1000);
